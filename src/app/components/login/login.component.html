@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header center">
+    Login
+  </div>
+  <div>
+    <form [formGroup]="form" (submit)="entrar()">
+      <div class="row w100porc pd6">
+          <app-label-information colorLabel="black" msgLabel="Usuário" fonteLabel="16px"></app-label-information>
+          <app-label-information class="ml5" *ngIf="userError" colorLabel="red" msgLabel="Obrigatório" fonteLabel="11px">
+          </app-label-information>
+          <input type="text" class="form-control" placeholder="Usuário" formControlName="user" 
+            [ngClass]="{'input-text-error': userError}" (change)="verifyChangeForm('user')">
+      </div>
+      <div class="row w100porc pd6">
+          <app-label-information colorLabel="black" msgLabel="Senha" fonteLabel="16px"></app-label-information>
+          <app-label-information class="ml5" *ngIf="passError" colorLabel="red" msgLabel="Obrigatório" fonteLabel="11px">
+          </app-label-information>
+          <input type="text" class="form-control" placeholder="Senha" formControlName="pass" 
+            [ngClass]="{'input-text-error': passError}" (change)="verifyChangeForm('pass')">
+      </div>
+      <div class="row mt5 mb5 center">
+          <app-button msg="Entrar" background="#6c757d" color="white"></app-button>
+      </div>
+    </form>
+  </div>
+</div>

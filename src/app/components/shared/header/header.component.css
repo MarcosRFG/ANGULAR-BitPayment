@@ -1,0 +1,19 @@
+.card{
+    border: 0px;
+    border-radius: 0px;
+    display: block;
+}
+
+.exit{
+    float: right;
+    line-height:70px;   
+}
+
+.logo{
+    line-height:70px;    
+}
+
+.row{
+    margin-right: 0px;
+    margin-left: 0px;
+}

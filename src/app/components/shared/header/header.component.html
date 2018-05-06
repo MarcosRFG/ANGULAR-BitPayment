@@ -1,0 +1,12 @@
+<div class="card w100porc height70 bgheader">
+    <div class="row">
+        <div class="col-11">
+            <app-label-information class="logo" colorLabel="#000" msgLabel="BitPayment" fonteLabel="30px">
+            </app-label-information>
+        </div>
+        <div class="col-1">
+            <app-label-information (click)="exit()" class="link exit" *ngIf="isLogged && _clearSession == 'false'" colorLabel="#FFF" msgLabel="Sair" fonteLabel="16px">
+            </app-label-information>
+        </div>
+    </div>
+</div>

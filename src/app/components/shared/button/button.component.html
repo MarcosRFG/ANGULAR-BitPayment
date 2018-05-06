@@ -1,0 +1,28 @@
+<button *ngIf="route == '' && numBackStage == ''"
+  class="btn" type="submit" 
+  [ngStyle]="{
+    'color': color,
+    'background-color' : background
+  }">
+  {{msg}}
+</button>
+
+<button *ngIf="route != '' && numBackStage == ''"
+  (click)="goRoute()"
+  class="btn" type="submit" 
+  [ngStyle]="{
+    'color': color,
+    'background-color' : background
+  }">
+  {{msg}}
+</button>
+
+<button *ngIf="numBackStage != ''"
+  (click)="returnChangeStage()"
+  class="btn" type="submit" 
+  [ngStyle]="{
+    'color': color,
+    'background-color' : background
+  }">
+  {{msg}}
+</button>

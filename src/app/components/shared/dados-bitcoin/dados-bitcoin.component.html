@@ -1,0 +1,42 @@
+<div class="card">
+  <form [formGroup]="form_pt2">
+    <div class="card-header">
+        {{txtTitle}}
+    </div>
+    <div class="card-body"> 
+      <div class="row">
+        <div class="col-4">
+          <app-label-information
+            colorLabel="black" msgLabel="Endereço da carteira" fonteLabel="16px"></app-label-information>
+          <app-label-information  *ngIf="end_CarteiraError == true" 
+            colorLabel="red" msgLabel="Obrigatório" fonteLabel="12px"></app-label-information>
+          <input type="text" class="form-control" placeholder="Endereço da carteira" 
+            formControlName="end_Carteira" (change)="verifyForm();">
+        </div>
+
+        <div class="col-3">
+          <app-label-information colorLabel="black" msgLabel="Exchange" fonteLabel="16px"></app-label-information>
+          <app-label-information  *ngIf="exchangeError == true" 
+            colorLabel="red" msgLabel="Obrigatório" fonteLabel="12px"></app-label-information>
+          <select *ngIf="loadData"
+            class="form-control" (change)="selectExchange = true; verifyForm();" formControlName="formExchange">
+            <option *ngFor="let exchange of exchangeData" [selected]="exchange.seleected == 'true'">
+              {{exchange.name}}
+            </option>
+          </select>
+
+          <select *ngIf="!loadData"
+            class="form-control" (change)="selectExchange = true; verifyForm();" formControlName="formExchange">
+            <option selected *ngIf="selectExchange == false">Selecione a Exchange</option>
+            <option *ngFor="let exchange of exchangeData">{{exchange.name}}</option>
+          </select>
+        </div>  
+      </div>
+    </div>
+    <div class="col-4">
+      <app-button (click)="next()" msg="{{buttonNext}}" background="blue" color="white"></app-button>
+      <app-button msg="Voltar" route="{{routerBack}}"  numBackStage="{{numberBackStage}}" 
+        (stage)="back($event)" background="#BEBEBE"></app-button>
+    </div>
+  </form>
+</div>

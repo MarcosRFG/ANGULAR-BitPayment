@@ -1,0 +1,18 @@
+<div  class="bgmenu height40 w100porc" *ngIf="isLogged && _clearSession == 'false'">
+  <div class="row">
+    <div (click)="goHome()" class="w80px h100porc center line40-h">
+      <app-link msg="Home" decoration="none" colorDefault="#253b26" colorHover="#568f63" colorSelected="#FFF"></app-link>
+    </div>
+
+    <app-divisor width="2px" height="20px" marginTop="10px"></app-divisor>
+    <div (click)="goEditPerfil()" class="w150px h100porc center line40-h">
+      <app-link msg="Editar meu Perfil" decoration="none" colorDefault="#253b26" colorHover="#568f63" colorSelected="#FFF"></app-link>
+    </div>
+
+    <app-divisor width="2px" height="20px" marginTop="10px"></app-divisor>
+    <div (click)="goEditBitcoin()" class="w200px h100porc center line40-h">
+      <app-link msg="Editar Dados do Bitcoin" decoration="none" colorDefault="#253b26" colorHover="#568f63" colorSelected="#FFF"></app-link>
+    </div>
+
+  </div>
+</div>

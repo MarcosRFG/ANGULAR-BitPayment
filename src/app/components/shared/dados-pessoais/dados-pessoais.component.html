@@ -1,0 +1,77 @@
+<div class="card">
+  <form [formGroup]="form_pt1">
+    <div class="card-header">
+      {{txtTitle}}
+    </div>
+    <div class="card-body">
+      <div class="row mb15">
+        <div class="col-4">
+          <app-label-information
+            colorLabel="black"
+            msgLabel="Nome Completo"
+            fonteLabel="16px">
+          </app-label-information>
+          <app-label-information *ngIf="nameError == true"
+            colorLabel="red"
+            msgLabel="Obrigatório"
+            fonteLabel="11px">
+          </app-label-information>
+          <input type="text" class="form-control" placeholder="Nome Completo" formControlName="name"
+            [ngClass]="{'input-text-error' :nameError === true}"
+            (change)="changeInputForm('name')">
+        </div>
+        <div class="col-4">
+          <app-label-information
+            colorLabel="black"
+            msgLabel="E-mail"
+            fonteLabel="16px">
+          </app-label-information>
+          <app-label-information *ngIf="emailError == true"
+            colorLabel="red"
+            msgLabel="Obrigatório"
+            fonteLabel="11px">
+          </app-label-information>
+          <input type="text" class="form-control" placeholder="E-mail" formControlName="email"
+            [ngClass]="{'input-text-error' :emailError === true}"
+            (change)="changeInputForm('email')">
+        </div>
+      </div>
+      <div class="row mb5">
+        <div class="col-2">
+          <app-label-information
+            colorLabel="black"
+            msgLabel="CPF"
+            fonteLabel="16px">
+          </app-label-information>
+          <app-label-information *ngIf="cpfError == true"
+            colorLabel="red"
+            msgLabel="Obrigatório"
+            fonteLabel="11px">
+          </app-label-information>
+          <input type="number" class="form-control" placeholder="CPF"  formControlName="cpf"
+            [ngClass]="{'input-text-error' :cpfError === true}"
+            (change)="changeInputForm('cpf')">
+        </div>
+        <div class="col-2">
+          <app-label-information
+            colorLabel="black"
+            msgLabel="Telefone"
+            fonteLabel="16px">
+          </app-label-information>
+          <app-label-information *ngIf="telefoneError == true"
+              colorLabel="red"
+              msgLabel="Obrigatório"
+              fonteLabel="11px">
+          </app-label-information>  
+          <input type="number" class="form-control" placeholder="Telefone" formControlName="telefone"
+              [ngClass]="{'input-text-error' :telefoneError === true}"
+              (change)="changeInputForm('telefone')"> 
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+        <app-button (click)="next()" msg="{{buttonNext}}" background="blue" color="white"></app-button>
+        <app-button msg="Voltar" route="{{routerBack}}" background="#BEBEBE"></app-button>
+    </div>
+  </form>
+</div>

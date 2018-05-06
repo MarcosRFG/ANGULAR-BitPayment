@@ -1,1 +1,119 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+    height:100%;
+    width: 100%;
+}
+
+/* Margin bottom */
+.mb5{
+   margin-bottom: 5px; 
+}
+.mb15{
+    margin-bottom: 15px;
+}
+/* Margin top */
+.mt5{
+    margin-top: 5px;
+}
+.mt15{
+    margin-top: 15px;
+}
+
+.input-text-error{
+    border: 1px solid #f00;
+}
+/* font-sizes */
+.fs12{
+    font-size: 12px;
+}
+/* paddings */
+.pd4{
+    padding: 4px;
+}
+.pd6{
+    padding: 6px;
+}
+.pd15{
+    padding: 15px;
+}
+.pd10-r{
+    padding-right: 10px;    
+}
+.pd15-r{
+    padding-right: 15px !important;    
+}
+.pd10-l{
+    padding-left: 10px;    
+}
+/* widht */
+.w100porc{
+    width: 100%;
+}
+.w97porc{
+    width: 97%;
+}
+.width80porc{
+    width: 80%;
+}
+.width20porc{
+    width: 20%;
+}
+.w80px{
+    width: 80px;
+}
+.w100px{
+    width: 100px;
+}
+.w150px{
+    width: 150px;
+}
+.w200px{
+    width: 200px;
+}
+
+/* height */
+
+.height20{
+    height: 20px;
+}
+.height40{
+    height: 40px;
+}
+.height70{
+    height: 70px;
+}
+.h100porc{
+    height: 100%;
+}
+/* CSS SHARED */
+.bgheader{
+    background-color: rgb(250, 95, 24);
+}
+.bgmenu{
+    background-color: rgb(233, 255, 234);
+}
+.bgfooter{
+    background-color: rgb(219, 219, 219);
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ml5{
+    margin-left: 5px;
+}
+
+.link{
+    cursor: pointer;
+}
+
+.line40-h{
+    line-height:40px
+}   
+
+.row{
+    margin-right: 0px;
+    margin-left: 0px;
+}

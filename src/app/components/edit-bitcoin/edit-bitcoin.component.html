@@ -1,0 +1,13 @@
+<div class="pd15">
+    <div class="row bgLabel mb15 center" *ngIf="saveWithSucess && isChangeForm == false">
+      <app-label-information msgLabel="Dados atualizados com sucesso" fonteLabel="18px"></app-label-information>
+  </div>
+
+  <app-dados-bitcoin 
+    buttonNext="Salvar"
+    txtTitle="Editar dados do Bitcoin"
+    routerBack="/dashboard"
+    loadData="true"
+    (saveWithSucess)="saveWithSucess = $event" (isChangeForm)="isChangeForm = $event">
+  </app-dados-bitcoin>
+</div>
