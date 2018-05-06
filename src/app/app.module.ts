@@ -29,6 +29,8 @@ import { EditBitcoinComponent } from './components/edit-bitcoin/edit-bitcoin.com
 import { HttpModule } from '@angular/http';
 import { GetDatosBitcoinService } from './services/get-datos-bitcoin.service';
 import { SaveDatosBitcoinService } from './services/save-datos-bitcoin.service';
+import { GetLoginService } from './services/get-login.service';
+import { ModalComponent } from './components/shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,7 @@ import { SaveDatosBitcoinService } from './services/save-datos-bitcoin.service';
     CardInformationComponent,
     EditPerfilComponent,
     EditBitcoinComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ import { SaveDatosBitcoinService } from './services/save-datos-bitcoin.service';
     GetCustomerService,
     SaveCustomerService,
     GetDatosBitcoinService,
-    SaveDatosBitcoinService
+    SaveDatosBitcoinService,
+    GetLoginService
   ],
   bootstrap: [AppComponent]
 })

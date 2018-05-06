@@ -1,0 +1,22 @@
+<div id="exampleModalLong" tabindex="-1" role="dialog" *ngIf="showModal == 'block'"
+  [ngStyle]="{'display': showModal}" 
+  [ngClass]="{
+    'show': showModal == 'block',
+    'modal': showModal == 'block',
+    'fade': showModal == 'block'
+  }">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Atenção</h5>
+      </div>
+      <div class="modal-body">
+        {{msg}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"
+         (click)="closeModal()">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
