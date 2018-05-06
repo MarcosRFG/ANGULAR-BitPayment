@@ -29,6 +29,21 @@ html, body {
 .pd4{
     padding: 4px;
 }
+.pd15-t{
+    padding-top: 15px;
+}
+.no-pd-r{
+    padding-right: 0px !important;
+}
+.no-pd-l{
+    padding-left: 0px !important;
+}
+.no-pd-t{
+    padding-top: 0px !important;
+}
+.no-pd-b{
+    padding-bottom: 0px !important;
+}
 .pd6{
     padding: 6px;
 }
@@ -86,13 +101,16 @@ html, body {
 }
 /* CSS SHARED */
 .bgheader{
-    background-color: rgb(250, 95, 24);
+    background-color:#f3904f;
 }
 .bgmenu{
     background-color: rgb(233, 255, 234);
 }
 .bgfooter{
     background-color: rgb(219, 219, 219);
+}
+.bg343a40{
+    background-color: #343a40;
 }
 
 .center{
@@ -116,4 +134,19 @@ html, body {
 .row{
     margin-right: 0px;
     margin-left: 0px;
+}
+
+.ajustCol{
+    flex-direction: row;
+}
+
+.no-borderRad{
+    border-radius: 0px !important;
+}
+
+.textWhite{
+    color: #ffffff;
+}
+.textDark{
+    color: #343a40;
 }

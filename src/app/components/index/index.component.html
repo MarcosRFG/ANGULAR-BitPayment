@@ -1,18 +1,39 @@
-<div class="card">
-    <div class="row">
-        <div class="col-3">
-            <div class="pd4">
-                <app-login (loginSucess)="loginSucess($event)"></app-login>
+<div class="card ajustCol no-pd-b ">
+    <div class="col-3 no-pd-r">
+        <div class="pd15-t">
+            <app-login (loginSucess)="loginSucess($event)"></app-login>
+        </div>
+    </div>
+
+    <div class="col-9 pd15-t center">
+        <div class="jumbotron p-3 p-md-5 no-pd-t no-pd-b text-white rounded">
+            <div class="px-0">
+                <h1 class="display-4 font-italic textDark">A melhor forma de pagar e receber pagamentos em bitcoin</h1>
+                <p class="lead my-3 textDark">
+                    O BitPayment foi criado para ajudar a comprar e receber pagamentos utilizando a criptomoeda bitcoin.
+                </p>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-3">
-            <div class="pd4 center">
-                <app-button msg="Cadastre-se" (click)="cadastrar()"></app-button>
-            </div>
+</div>
+
+<div class="card ajustCol no-borderRad bg343a40 mt15 pd15">
+    <div class="col-6 no-pd-l">
+        <p class="textWhite center">
+            Compre em segurança utilizando bitcoin.
+        </p>
+        <div class="center">
+            <app-button msg="Cadastre-se" (click)="cadastrar()"></app-button>
         </div>
     </div>
-
+    <app-divisor width="1px" height="100%" marginTop="0px" color="#8f9aa5"></app-divisor>
+    <div class="col-6">
+        <p class="textWhite center">
+            Receba pagamentos em segurança utilizando bitcoin.
+        </p>
+        <div class="center">
+            <app-button msg="Cadastre-se" (click)="cadastrar()"></app-button>
+        </div>
+    </div>
 </div>
