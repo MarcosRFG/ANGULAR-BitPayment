@@ -31,6 +31,8 @@ import { GetDatosBitcoinService } from './services/get-datos-bitcoin.service';
 import { SaveDatosBitcoinService } from './services/save-datos-bitcoin.service';
 import { GetLoginService } from './services/get-login.service';
 import { ModalComponent } from './components/shared/modal/modal.component';
+import { PerfilCustomerComponent } from './components/dashboard/perfil-customer/perfil-customer.component';
+import { PerfilCompanyComponent } from './components/dashboard/perfil-company/perfil-company.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,8 @@ import { ModalComponent } from './components/shared/modal/modal.component';
     EditPerfilComponent,
     EditBitcoinComponent,
     ModalComponent,
+    PerfilCustomerComponent,
+    PerfilCompanyComponent,
   ],
   imports: [
     BrowserModule,

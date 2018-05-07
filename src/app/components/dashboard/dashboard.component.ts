@@ -8,10 +8,14 @@ import { AuthService } from '../../services/auth.service';
 })
 export class DashboardComponent implements OnInit {
   isLogged: boolean;
+  perfilCustomer: boolean;
+  perfilCompany: boolean;
+
   constructor(private auth: AuthService) { }
 
   ngOnInit() {
     this.isLogged = this.auth.verifyLogin();
+    this.perfilCustomer = true;
 
     if(this.isLogged === true){
       console.log('esta logado');
